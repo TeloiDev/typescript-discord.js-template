@@ -2,8 +2,6 @@
 
 This repo was made so everyone can easily start their discord.js bots with typescript!
 
-<br/>
-
 # Getting Started
 
 In order to start with this template first you need to install this repo with `git clone typescript discord template` or just download it through GitHub. <br/>
@@ -15,8 +13,6 @@ Once you're done remove every .example from files' and directories' names and ru
 ## Customizing
 
 The purpose of TypeScript is to strongly type your code so you need to set up everything in `types/` directory.
-
-<br/>
 
 ### Comamand
 
@@ -38,8 +34,6 @@ declare module "discord.js" {
 }
 ```
 
-<br/>
-
 ### Client
 
 Same aplies to Client class. This is it's default state and here's how you can change it to your needs.
@@ -55,8 +49,6 @@ declare module "discord.js" {
   }
 }
 ```
-
-<br/>
 
 ### .env and basic setup
 
@@ -79,8 +71,6 @@ You can find your bot's prefix in `messageCreate.ts` file.
 Remember to name your event files same as the actual event's name.
 
 Example: if an event is called "messageDelete" name a your file "messageDelete.ts" etc.
-
-<br/>
 
 ### Command
 
