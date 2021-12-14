@@ -16,7 +16,7 @@ The purpose of TypeScript is to strongly type your code so you need to set up ev
 
 ### Comamand
 
-This is the default state of Command interface. You can add any other properity that you need.
+This is the [default state](https://github.com/TeloiDev/typescript-discord.js-template/blob/default/src/types/Command.ts) of Command interface. You can add any other properity that you need.
 
 ```ts
 import { Message } from "discord.js";
@@ -36,7 +36,7 @@ declare module "discord.js" {
 
 ### Client
 
-Same aplies to Client class. This is it's default state and here's how you can change it to your needs.
+Same aplies to Client interface. This is it's [default state](https://github.com/TeloiDev/typescript-discord.js-template/blob/default/src/types/Client.ts) and here's how you can change it to your needs.
 
 ```ts
 import { Collection } from "discord.js";
@@ -70,7 +70,7 @@ You can find your bot's prefix in `messageCreate.ts` file.
 
 Remember to name your event files same as the actual event's name.
 
-Example: if an event is called "messageDelete" name a your file "messageDelete.ts" etc.
+Example: if an event is called "messageDelete" name your file "messageDelete.ts" etc.
 
 ### Command
 
