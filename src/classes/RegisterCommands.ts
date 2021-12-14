@@ -8,7 +8,7 @@ export class RegisterCommands {
   }
 
   private loadDir(dir: string): void {
-    const commandFiles = readdirSync(`${__dirname}/../commands/`).filter((file) =>
+    const commandFiles = readdirSync(`${__dirname}/../commands/${dir}`).filter((file) =>
       file.endsWith(".js")
     );
 

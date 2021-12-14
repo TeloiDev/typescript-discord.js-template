@@ -4,6 +4,8 @@ import Module from "module";
 const prefix = "!"; // Example Prefix
 
 export = (Discord: Module, client: Client, message: Message): void => {
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+
   const args = message.content.slice(prefix.length).split(/ +/);
   const cmd = args.shift()?.toLowerCase();
 
