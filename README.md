@@ -4,7 +4,7 @@ This repo was made so everyone can easily start their discord.js bots with types
 
 # Getting Started
 
-In order to start with this template first you need to install this repo with `git clone typescript discord template` or just download it through GitHub. <br/>
+In order to start with this template first you need to install this repo with `git clone typescript-discord.js-template` or just download it through GitHub. <br/>
 
 Once you're done remove every .example from files' and directories' names and run `npm install`.
 
