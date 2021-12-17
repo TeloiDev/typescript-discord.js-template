@@ -1,6 +1,7 @@
 import Discord, { Client, Intents, Collection } from "discord.js";
 import { RegisterCommands } from "./RegisterCommands";
 import { RegisterEvents } from "./RegisterEvents";
+import { MongoClient } from "./MongoClient";
 import { stdout } from "process";
 import { readdirSync } from "fs";
 
@@ -16,6 +17,8 @@ export class DiscordClient {
   }
 
   public start(): void {
+    require("dotenv").config();
+
     const start = performance.now();
     stdout.write("- Client | Starting process...\n");
 
@@ -24,11 +27,11 @@ export class DiscordClient {
     // Register all commands and events
     new RegisterCommands(commandDirs, this.client);
     new RegisterEvents(Discord, this.client);
+    new MongoClient(`${process.env.MONGODB_SRV}`);
 
     stdout.write(JSON.stringify(this.client) + "\n");
 
     // Parse ENV values
-    require("dotenv").config();
     this.client.login(process.env.DISCORD_TOKEN);
 
     const end = performance.now();
