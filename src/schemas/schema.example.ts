@@ -1,11 +1,15 @@
-import { Schema, SchemaTypes, Types, model } from "mongoose";
+import { Schema, model, Document, Model } from "mongoose";
 
 // customize to your need
+interface schema extends Document {
+  exampleProperity: string;
+  exampleValie: number;
+}
 
-const GuildSchema = new Schema({
-  _id: Types.ObjectId,
+const ExampleSchema: Schema = new Schema({
   exampleProperity: String,
   exampleValue: Number,
 });
 
-export = model("MySchema", GuildSchema, "MySchemas");
+const schem: Model<schema> = model("MySchema", ExampleSchema);
+export default schem;
